@@ -1,0 +1,90 @@
+/* style.css */
+
+/* Corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Fond noir */
+    color: #ffffff; /* Texte blanc */
+    margin: 0;
+    padding: 20px;
+    text-align: center; /* Centrer tout le texte */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh; /* Occupe toute la hauteur de la page */
+}
+
+/* Style pour les titres */
+h1 {
+    font-size: 2em;
+    color: #ffffff; /* Texte blanc */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #ffffff; /* Texte blanc */
+    margin-bottom: 20px;
+}
+
+/* Style pour les paragraphes */
+p {
+    font-size: 1.2em;
+    color: #ffffff; /* Texte blanc */
+    line-height: 1.6;
+}
+
+/* Style du lien */
+a {
+    font-size: 1.5em;
+    color: #4CAF50; /* Vert */
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block; /* Pour que le lien soit plus facile à centrer */
+    margin-top: 20px;
+}
+
+a:hover {
+    color: #45a049; /* Vert plus foncé au survol */
+}
+
+/* Style de l'image */
+img {
+    display: block; /* Pour qu'elle se centre */
+    margin: 20px auto; /* Centrer l'image et ajouter de l'espace autour */
+    max-width: 100%; /* L'image sera redimensionnée à la largeur du conteneur */
+    height: auto; /* Maintenir les proportions de l'image */
+    border-radius: 8px; /* Optionnel : bord arrondi pour l'image */
+}
+
+/* Conteneur pour l'animation de texte */
+.animated-text-container {
+    width: 100%; /* Prendre toute la largeur */
+    overflow: hidden; /* Cacher le texte qui dépasse */
+    position: relative; /* Positionner l'élément de manière absolue à l'intérieur */
+    padding: 10px 0; /* Ajouter un peu de padding pour que le texte ne touche pas les bords */
+    margin-top: 20px; /* Décaler l'animation après l'image */
+    background-color: #000; /* Fond noir pour l'animation de texte */
+}
+
+/* Animation pour le texte défilant */
+.animated-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff; /* Texte en blanc */
+    white-space: nowrap; /* Empêche le texte de se casser */
+    animation: marquee 10s linear infinite; /* Applique l'animation de défilement */
+    padding-left: 100%; /* Démarrer à droite hors de l'écran */
+    display: inline-block; /* Pour que le texte se déplace de manière fluide */
+}
+
+/* Animation de défilement de droite à gauche */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%); /* Commence à droite, hors de l'écran */
+    }
+    100% {
+        transform: translateX(-100%); /* Se déplace jusqu'à la gauche, hors de l'écran */
+    }
+}
